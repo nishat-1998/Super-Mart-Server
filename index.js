@@ -23,7 +23,7 @@ client.connect(err => {
   const eventCollection = client.db("vol-net").collection("events");
   const ordersCollection = client.db("vol-net").collection("orders");
   
-  app.get('/products',(req,res) =>{
+  app.get('/events',(req,res) =>{
       eventCollection.find()
       .toArray((err,items) =>{
          res.send(items)
@@ -31,9 +31,9 @@ client.connect(err => {
       })
   })
   
-  app.post('/addProduct',(req,res) =>{
-      const newProduct=req.body;
-   eventCollection.insertOne(newProduct)
+  app.post('/addEvents',(req,res) =>{
+      const newEvent=req.body;
+   eventCollection.insertOne(newEvent)
    .then(result =>{
       // console.log(" inserted Count",result.insertedCount)
        res.send(result.insertedCount >0)
@@ -61,7 +61,7 @@ client.connect(err => {
       eventCollection.findOneAndDelete({_id:id})
       .then(documents =>res.send(!!documents.value))
     })
-    
+
 });
 
 
