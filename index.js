@@ -33,7 +33,7 @@ client.connect(err => {
   
   app.post('/addEvent',(req,res) =>{
       const newEvent=req.body;
-      console.log('adding new event: ',newEvent)
+     // console.log('adding new event: ',newEvent)
    eventCollection.insertOne(newEvent)
    .then(result =>{
       // console.log(" inserted Count",result.insertedCount)
