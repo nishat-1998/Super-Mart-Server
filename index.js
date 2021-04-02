@@ -31,7 +31,7 @@ client.connect(err => {
       })
   })
   
-  app.post('/addEvents',(req,res) =>{
+  app.post('/addEvent',(req,res) =>{
       const newEvent=req.body;
    eventCollection.insertOne(newEvent)
    .then(result =>{
