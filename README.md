@@ -1,7 +1,7 @@
 
 # SUPER MART WEB APP
 
-A Single page service app where people are able to select plumber service in their book service and more with their information to Dashboard.
+A Single page E-commarce app where people are able to select product in their buy now and more with their information to navbar.
 
 [LIVE WEBSITE](https://super-mart-bd.web.app/) | [Live API Server]()
 
